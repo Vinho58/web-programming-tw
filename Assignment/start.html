@@ -1,0 +1,315 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                background-color: #D9D9D9;
+            }
+
+            hr {
+                border: 1px solid #BBBBBB;
+                margin: 0;
+            }
+
+            .topbar .page {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 60px;
+            }
+
+            .brand {
+                color: black;
+                font-size: 24px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .nav {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+                margin: 0;
+            }
+
+            .nav a {
+                color: #333;
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .nav a:hover {
+                color: #999;
+            }
+
+            .hero {
+                position: relative;
+                height: 540px;
+
+                background-image: url("picturess/newyork.jpeg");
+                background-size: cover;
+                background-position: center;
+
+                display: flex;
+                align-items: center;
+            }
+
+            /* Dark gradient overlay */
+            .overlay {
+                position: absolute;
+
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.85),
+                    rgba(0, 0, 0, 0.1)
+                );
+            }
+
+            /* Text on top of the overlay */
+            .hero-content {
+                position: relative;
+                color: white;
+                padding: 60px;
+            }
+
+            .hero-content h1 {
+                font-size: 60px;
+            }
+
+            /* Discover */
+            .discover {
+                padding: 60px;
+            }
+
+            .label {
+                font-size: 12px;
+                font-weight: bold;
+                color: #999;
+            }
+
+            .discover h2 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            div.content {
+                overflow: auto;
+            }
+
+            img.right {
+                float: right;
+                width: 45%;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            /* Neighborhoods */
+            .neighborhoods {
+                padding: 60px;
+            }
+
+            .neighborhoods h2 {
+                font-size: 40px;
+            }
+
+            img.left {
+                float: left;
+                width: 45%;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            /* Gallery */
+            .gallery {
+                padding: 60px;
+            }
+
+            .gallery h2 {
+                font-size: 40px;
+            }
+
+            .photos {
+                display: flex;
+                gap: 20px;
+            }
+
+            .photo {
+                position: relative;
+                width: 33%;
+            }
+
+            .photo-image {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .photo-overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(0, 0, 0, 0.6);
+                border-radius: 10px;
+            }
+
+            .photo:hover .photo-overlay {
+                opacity: 1;
+            }
+
+            .photo-text {
+                color: white;
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .photo-caption {
+                font-size: 12px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 30px 60px;
+                background-color: #333;
+                color: white;
+                text-align: center;
+            }
+
+            .footer a {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header class="topbar" id="top">
+            <div class="page">
+                <a class="brand" href="#top">NEW YORK</a>
+
+                <ul class="nav">
+                    <li><a href="#discover">DISCOVER</a></li>
+                    <li><a href="#neighborhoods">NEIGHBORHOODS</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="hero">
+
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+                <h1>New York Never Sleeps.</h1>
+                <p>Bright lights, big dreams, one unforgettable city.</p>
+            </div>
+
+        </section>
+
+        <section class="discover" id="discover">
+
+            <p class="label">01 / DISCOVER</p>
+            <h2>The city of big dreams.</h2>
+
+            <div class="content">
+                <img class="right" src="picturess/discover1.avif" alt="Empire State Building">
+
+                <p class="subtitle">MORE THAN A CITY</p>
+
+                <p>New York is big and loud. There is always something to see, like Times Square or Central Park.</p>
+
+                <p>The Empire State Building is one of the most famous buildings in the city. From the top you can see all of New York.</p>
+
+                <p><em>"New York is best seen on foot."</em></p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="neighborhoods" id="neighborhoods">
+
+            <p class="label">02 / NEIGHBORHOODS</p>
+            <h2>Every part is different.</h2>
+
+            <div class="content">
+                <img class="left" src="picturess/neighborhoods.jpg" alt="Brooklyn and Manhattan from above">
+
+                <p class="subtitle">THE OTHER SIDE</p>
+
+                <p>New York is not only Manhattan. Brooklyn has small cafes, old brick houses and a lot of street art.</p>
+
+                <p>Take your time and walk around. Every neighborhood looks and feels a little different.</p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="gallery" id="gallery">
+
+            <p class="label">03 / GALLERY</p>
+            <h2>New York in three frames</h2>
+
+            <div class="photos">
+
+                <div class="photo">
+                    <img src="picturess/images11.jpeg" alt="Central Park" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-text">
+                            Central Park
+                            <div class="photo-caption">GREEN IN THE CITY</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo">
+                    <img src="picturess/images22-crop.jpeg" alt="Wall Street" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-text">
+                            Wall Street
+                            <div class="photo-caption">MONEY NEVER SLEEPS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo">
+                    <img src="picturess/image33.jpg" alt="Skyview" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-text">
+                            Skyview
+                            <div class="photo-caption">THE CITY FROM ABOVE</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>Thanks for visiting New York.</p>
+            <a href="#top">Back to Top</a>
+        </footer>
+
+    </body>
+</html>
