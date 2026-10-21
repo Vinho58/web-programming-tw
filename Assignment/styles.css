@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    background-color: #D9D9D9;
+}
+
+hr {
+    border: 1px solid #BBBBBB;
+    margin: 0;
+}
+
+.topbar .page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+}
+
+.brand {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #999;
+}
+
+.hero {
+    position: relative;
+    height: 540px;
+
+    background-image: url("picturess/newyork.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Dark gradient overlay */
+.overlay {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+/* Text on top of the overlay */
+.hero-content {
+    position: relative;
+    color: white;
+    padding: 60px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+}
+
+/* Discover */
+.discover {
+    padding: 60px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+}
+
+.discover h2 {
+    font-size: 40px;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.content {
+    overflow: auto;
+}
+
+img.right {
+    float: right;
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Neighborhoods */
+.neighborhoods {
+    padding: 60px;
+}
+
+.neighborhoods h2 {
+    font-size: 40px;
+}
+
+img.left {
+    float: left;
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.planner {
+    padding: 60px;
+}
+
+.planner h2 {
+    font-size: 40px;
+}
+
+.planner h2.budget {
+    font-size: 28px;
+}
+
+.planner table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.planner th, .planner td {
+    padding: 18px;
+    border: 1px solid #DDDDDD;
+    text-align: left;
+    font-size: 14px;
+}
+
+.planner th {
+    background-color: #EEEEEE;
+}
+
+.planner td {
+    background-color: white;
+}
+
+.planner tr.head th {
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+}
+
+.planner tr.alt td {
+    background-color: #F5F5F5;
+}
+
+.planner td.highlight {
+    background-color: #DCEBF7;
+    color: #2B5C8A;
+    font-weight: bold;
+    text-align: center;
+}
+
+.planner td.cost {
+    text-align: right;
+}
+
+/* Gallery */
+.gallery {
+    padding: 60px;
+}
+
+.gallery h2 {
+    font-size: 40px;
+}
+
+.photos {
+    display: flex;
+    gap: 20px;
+}
+
+.photo {
+    position: relative;
+    width: 33%;
+}
+
+.photo-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-text {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.photo-caption {
+    font-size: 12px;
+}
+
+/* Footer */
+.footer {
+    padding: 30px 60px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
