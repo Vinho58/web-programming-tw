@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication</title>
+<style>
+table
+{
+    border-collapse: collapse;
+}
+
+td
+{
+    border: 1px solid #cccccc;
+    padding: 10px 15px;
+}
+</style>
+</head>
+<body>
+
+<h3>Multiplication</h3>
+
+<div id="demo"></div>
+
+<script>
+    let table = "<table border='1'>";
+
+    for (i=1;i<10;i++) {
+        table += "<tr>";
+        for (j=2;j<10;j++) {
+            table += "<td>" + j + " × " + i + " = " + j * i + "</td>";
+        }
+        table += "</tr>";
+    }
+
+    table += "</table>";
+
+    document.getElementById("demo").innerHTML = table;
+</script>
+
+</body>
+</html>
