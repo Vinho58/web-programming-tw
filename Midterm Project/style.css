@@ -137,7 +137,7 @@ hr {
     margin: 0;
 }
 
-.welcome, .seasons {
+.welcome, .seasons, .overview, .stops {
     padding: 60px;
 }
 
@@ -206,6 +206,25 @@ img.map {
     padding: 30px;
     background-color: white;
     border-radius: 10px;
+}
+
+.stop-list li {
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+.stop-list a {
+    color: #8C2F39;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.stop-list a:hover {
+    text-decoration: underline;
+}
+
+.stops div.content {
+    padding: 20px 0;
 }
 
 .footer {
