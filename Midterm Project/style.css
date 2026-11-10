@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    background-color: #F7F3EC;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+hr {
+    border: 1px solid #E2D8C8;
+    margin: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    background-color: white;
+}
+
+.brand {
+    color: #8C2F39;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #8C2F39;
+}
+
+.nav a.active {
+    color: #8C2F39;
+}
+
+.hero {
+    position: relative;
+    height: 540px;
+
+    background-image: url("images/neuschwanstein.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Dark gradient overlay */
+.overlay {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+/* Text on top of the overlay */
+.hero-content {
+    position: relative;
+    width: 45%;
+    color: white;
+    padding: 60px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+}
+
+.hero-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #D4A64A;
+}
+
+.button {
+    padding: 12px 24px;
+    background-color: #D4A64A;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.banner {
+    padding: 60px;
+    color: white;
+    background: linear-gradient(
+        to right,
+        rgba(94, 31, 38, 1),
+        rgba(140, 47, 57, 0.85)
+    );
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.welcome, .seasons {
+    padding: 60px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #8C2F39;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #999;
+}
+
+div.content {
+    overflow: auto;
+}
+
+.content a {
+    color: #8C2F39;
+    font-weight: bold;
+}
+
+.content a:hover {
+    color: #D4A64A;
+}
+
+img.right {
+    float: right;
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+img.left {
+    float: left;
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+img.map {
+    float: right;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.facts {
+    list-style-type: square;
+}
+
+.facts li {
+    padding: 5px 0;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.cell {
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.footer {
+    padding: 30px 60px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #D4A64A;
+}
+
+.credits {
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+.credits a {
+    color: #AAAAAA;
+}
