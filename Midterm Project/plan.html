@@ -21,14 +21,167 @@
 
         <section class="banner">
             <h1>Plan Your Trip</h1>
-            <p>Three days on the Romantic Road and what they cost.</p>
+            <p>Three days on the Romantic Road and what the tickets cost.</p>
+        </section>
+
+        <section class="days">
+
+            <p class="label">01 / DAY BY DAY</p>
+            <h2>Three days on the road.</h2>
+            <p>This is my plan for a road trip by car. Click on a day to see what you can do.</p>
+
+            <div class="day-buttons">
+                <button onclick="showDay1()">DAY 1</button>
+                <button onclick="showDay2()">DAY 2</button>
+                <button onclick="showDay3()">DAY 3</button>
+            </div>
+
+            <div class="day-box">
+                <div class="day-image" id="day-image"></div>
+
+                <div class="day-info">
+                    <h3 id="day-title"></h3>
+                    <ul id="day-plan"></ul>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="calculator">
+
+            <p class="label">02 / TICKET CALCULATOR</p>
+            <h2>What will your tickets cost?</h2>
+            <p>Click on "+ ADD" for every ticket you need, for example one for each person in your group. The calculator adds up the total price for you. The prices are the adult prices for 2026.</p>
+
+            <table>
+                <tr class="head">
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>W&uuml;rzburg Residence</th>
+                    <td>&euro;10</td>
+                    <td id="residence-quantity"></td>
+                    <td id="residence-subtotal"></td>
+                    <td><button onclick="addResidence()">+ ADD</button></td>
+                </tr>
+                <tr class="alt">
+                    <th>Fuggerei</th>
+                    <td>&euro;8</td>
+                    <td id="fuggerei-quantity"></td>
+                    <td id="fuggerei-subtotal"></td>
+                    <td><button onclick="addFuggerei()">+ ADD</button></td>
+                </tr>
+                <tr>
+                    <th>Neuschwanstein Castle</th>
+                    <td>&euro;21</td>
+                    <td id="castle-quantity"></td>
+                    <td id="castle-subtotal"></td>
+                    <td><button onclick="addCastle()">+ ADD</button></td>
+                </tr>
+                <tr class="total">
+                    <td colspan="3">Total</td>
+                    <td id="total"></td>
+                    <td><button onclick="resetTrip()">RESET</button></td>
+                </tr>
+            </table>
+
         </section>
 
         <footer class="footer">
             <p>Romantic Road Guide by Kevin Friedl</p>
             <p>Official website: <a href="https://www.romantischestrasse.de/en/" target="_blank">www.romantischestrasse.de</a></p>
             <a href="#top">Back to Top</a>
+            <p class="credits">Photos (cropped) from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Rothenburg_BW_4.JPG" target="_blank">Berthold Werner</a> (public domain), <a href="https://commons.wikimedia.org/wiki/File:View_from_the_Daniel_tower_of_St._George%E2%80%99s_Church_in_N%C3%B6rdlingen,_20250501_1246_8375.jpg" target="_blank">Jakub Hałun</a> (CC BY 4.0), <a href="https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2024.jpg" target="_blank">Wilfredor</a> (CC0).</p>
         </footer>
+
+        <script>
+            let residencePrice = 10;
+            let fuggereiPrice = 8;
+            let castlePrice = 21;
+
+            let residenceQuantity = 0;
+            let fuggereiQuantity = 0;
+            let castleQuantity = 0;
+
+            function showDay1() {
+                document.getElementById("day-image").innerHTML = "<img src='images/rothenburg.jpg' alt='The Pl&ouml;nlein square in Rothenburg ob der Tauber'>";
+                document.getElementById("day-title").innerHTML = "Day 1: W&uuml;rzburg and Rothenburg";
+
+                let plan = "<li><strong>Morning:</strong> Visit the W&uuml;rzburg Residence and walk over the Old Main Bridge.</li>";
+                plan += "<li><strong>Afternoon:</strong> Drive about one hour south to Rothenburg ob der Tauber.</li>";
+                plan += "<li><strong>Evening:</strong> Walk on the town wall and join the night watchman's tour.</li>";
+
+                document.getElementById("day-plan").innerHTML = plan;
+            }
+
+            function showDay2() {
+                document.getElementById("day-image").innerHTML = "<img src='images/noerdlingen.jpg' alt='View from the Daniel tower over N&ouml;rdlingen'>";
+                document.getElementById("day-title").innerHTML = "Day 2: Dinkelsb&uuml;hl and N&ouml;rdlingen";
+
+                let plan = "<li><strong>Morning:</strong> Explore the colourful old town of Dinkelsb&uuml;hl.</li>";
+                plan += "<li><strong>Afternoon:</strong> Climb the Daniel tower in N&ouml;rdlingen and walk on the round town wall.</li>";
+                plan += "<li><strong>Evening:</strong> Drive to Augsburg and stay there for the night.</li>";
+
+                document.getElementById("day-plan").innerHTML = plan;
+            }
+
+            function showDay3() {
+                document.getElementById("day-image").innerHTML = "<img src='images/neuschwanstein.jpg' alt='Neuschwanstein Castle in front of the mountains'>";
+                document.getElementById("day-title").innerHTML = "Day 3: Augsburg and Neuschwanstein";
+
+                let plan = "<li><strong>Morning:</strong> Visit the Fuggerei in Augsburg.</li>";
+                plan += "<li><strong>Afternoon:</strong> Drive about 1.5 hours to F&uuml;ssen and visit Neuschwanstein Castle.</li>";
+                plan += "<li><strong>Evening:</strong> Have dinner in the old town of F&uuml;ssen.</li>";
+
+                document.getElementById("day-plan").innerHTML = plan;
+            }
+
+            function addResidence() {
+                residenceQuantity = residenceQuantity + 1;
+                showTotal();
+            }
+
+            function addFuggerei() {
+                fuggereiQuantity = fuggereiQuantity + 1;
+                showTotal();
+            }
+
+            function addCastle() {
+                castleQuantity = castleQuantity + 1;
+                showTotal();
+            }
+
+            function resetTrip() {
+                residenceQuantity = 0;
+                fuggereiQuantity = 0;
+                castleQuantity = 0;
+                showTotal();
+            }
+
+            function showTotal() {
+                let residenceSubtotal = residencePrice * residenceQuantity;
+                let fuggereiSubtotal = fuggereiPrice * fuggereiQuantity;
+                let castleSubtotal = castlePrice * castleQuantity;
+                let total = residenceSubtotal + fuggereiSubtotal + castleSubtotal;
+
+                document.getElementById("residence-quantity").innerHTML = residenceQuantity;
+                document.getElementById("residence-subtotal").innerHTML = "&euro;" + residenceSubtotal;
+                document.getElementById("fuggerei-quantity").innerHTML = fuggereiQuantity;
+                document.getElementById("fuggerei-subtotal").innerHTML = "&euro;" + fuggereiSubtotal;
+                document.getElementById("castle-quantity").innerHTML = castleQuantity;
+                document.getElementById("castle-subtotal").innerHTML = "&euro;" + castleSubtotal;
+                document.getElementById("total").innerHTML = "&euro;" + total;
+            }
+
+            showDay1();
+            showTotal();
+        </script>
 
     </body>
 </html>

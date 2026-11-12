@@ -137,7 +137,7 @@ hr {
     margin: 0;
 }
 
-.welcome, .seasons, .overview, .stops, .sights, .prices {
+.welcome, .seasons, .overview, .stops, .sights, .prices, .days, .calculator {
     padding: 60px;
 }
 
@@ -201,11 +201,26 @@ img.map {
     padding: 15px 0;
 }
 
-.cell {
+.spring, .summer, .autumn, .winter {
     width: 50%;
     padding: 30px;
-    background-color: white;
     border-radius: 10px;
+}
+
+.spring {
+    background-color: #E2EFD6;
+}
+
+.summer {
+    background-color: #FBEDC2;
+}
+
+.autumn {
+    background-color: #F5D9C3;
+}
+
+.winter {
+    background-color: #DCE7F2;
 }
 
 .stop-list li {
@@ -320,8 +335,64 @@ tr.note td {
     text-align: center;
 }
 
+tr.total td {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 td a {
     color: #8C2F39;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8C2F39;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+button:hover {
+    background-color: #D4A64A;
+    color: #333;
+}
+
+.day-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.day-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.day-image {
+    width: 45%;
+}
+
+.day-image img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.day-info {
+    width: 55%;
+}
+
+.day-info li {
+    padding: 8px 0;
 }
 
 .footer {
