@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="topbar">
+        <a class="brand" href="/">{{ name }}</a>
+        <ul class="nav">
+            <li><a href="/">Profile</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1>{{ name }}</h1>
+        <p>{{ quote }}</p>
+    </div>
+
+    <div class="box">
+        <h2>About Me</h2>
+        <p>{{ description }}</p>
+
+        <h2>My Hobbies</h2>
+        <div class="cards">
+            {% for hobby in hobbies %}
+                <div class="card">
+                    <h3>{{ hobby[0] }}</h3>
+                    <p>{{ hobby[1] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h2>My Skills</h2>
+        <ul class="skills">
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Thanks for visiting my page.</p>
+    </div>
+</body>
+</html>
